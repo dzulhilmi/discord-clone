@@ -14,7 +14,7 @@ export async function GET(req: Request) {
     const channelId = searchParams.get("channelId");
 
     if (!profile) {
-      return new NextResponse("unauthorized", { status: 401 });
+      return new NextResponse("Unauthorized", { status: 401 });
     }
     if (!channelId) {
       return new NextResponse("Channel ID missing", { status: 400 });
